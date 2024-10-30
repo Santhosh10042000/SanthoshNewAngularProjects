@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ChartRoutingModule } from './chart-routing.module';
 import { ChartComponentComponent } from './chart-component/chart-component.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { ChartComponentComponent } from './chart-component/chart-component.compo
   ],
   imports: [
     CommonModule,
-    ChartRoutingModule
+    ChartRoutingModule,
+    MatExpansionModule,
+    
   ]
 })
 export class ChartModule { }

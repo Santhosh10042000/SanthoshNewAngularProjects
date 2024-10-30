@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-chart-component',
@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './chart-component.component.css'
 })
 export class ChartComponentComponent {
+  readonly panelOpenState = signal(false);
 constructor(){}
 ngoninit(){
   
 }
+
 }
