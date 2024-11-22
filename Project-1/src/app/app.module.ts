@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ChartModule } from './chart/chart.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material/material.module';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './Store/Counter.reducer';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     ChartModule,
-    MaterialModule
+    MaterialModule,
+    StoreModule.forRoot({counter:counterReducer}),
+    
   ],
   providers: [
     provideAnimationsAsync()

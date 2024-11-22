@@ -1,4 +1,6 @@
 import { Component, signal } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { TableDataService } from '../../Service/table-data.service';
 
 @Component({
   selector: 'app-chart-component',
@@ -7,9 +9,14 @@ import { Component, signal } from '@angular/core';
 })
 export class ChartComponentComponent {
   readonly panelOpenState = signal(false);
-constructor(){}
-ngoninit(){
-  
-}
-
+  constructor(private productService: TableDataService) {}
+  SpinnerFlag:boolean=false;
+  ngOnInit() {
+    setTimeout(() => {
+      this.SpinnerFlag=true;
+    }, 2000);
+    }
+    ClickHere(){
+      this.productService.setLoggedIn(true)
+    }
 }

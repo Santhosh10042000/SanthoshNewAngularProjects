@@ -3,9 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'chart',
     loadChildren: () => import('./chart/chart.module').then(m => m.ChartModule)
-  }
+  },
+  {
+    path: '',
+    loadChildren: () => import('./testingcomponents/testingcomponents.module').then(m => m.TestingcomponentsModule)
+  },
+
 ];
 
 @NgModule({

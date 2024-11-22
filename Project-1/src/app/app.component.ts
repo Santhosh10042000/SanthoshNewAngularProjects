@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TableDataService } from './Service/table-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Project-1';
+  constructor(private tableData:TableDataService){
+    this.tableData.isLoggedIn$.subscribe((data:any)=>{
+      console.log(data)
+    })
+  }
+  
 }
